@@ -1,0 +1,24 @@
+<svg width="111" height="112" viewBox="0 0 111 112" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="111" height="112" fill="#E5E5E5"/>
+<rect width="1440" height="1024" transform="translate(-1104 -322)" fill="white"/>
+<path d="M55.8469 31.8827V1" stroke="#7D63AD" stroke-width="2" stroke-linecap="round"/>
+<path d="M74.1865 38.9012L94.6422 17.8448" stroke="#7D63AD" stroke-width="2" stroke-linecap="round"/>
+<path d="M79.5786 55.3582L109 56.1357" stroke="#7D63AD" stroke-width="2" stroke-linecap="round"/>
+<path d="M74.3179 73.2931L95.3478 93.7818" stroke="#7D63AD" stroke-width="2" stroke-linecap="round"/>
+<path d="M56.6444 111L56.2604 81.7164" stroke="#7D63AD" stroke-width="2" stroke-linecap="round"/>
+<path d="M17.7571 92.9468L38.2128 71.8904" stroke="#7D63AD" stroke-width="2" stroke-linecap="round"/>
+<path d="M2.00002 56.4448L31.3983 55.0495" stroke="#7D63AD" stroke-width="2" stroke-linecap="round"/>
+<path d="M16.3625 17.1272L36.785 38.2155" stroke="#7D63AD" stroke-width="2" stroke-linecap="round"/>
+<g filter="url(#filter0_b_149_38)">
+<rect x="-834" y="-160" width="900" height="700" rx="20" fill="white" fill-opacity="0.1"/>
+<rect x="-833" y="-159" width="898" height="698" rx="19" stroke="#7D63AD" stroke-width="2"/>
+</g>
+<defs>
+<filter id="filter0_b_149_38" x="-864" y="-190" width="960" height="760" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feGaussianBlur in="BackgroundImage" stdDeviation="15"/>
+<feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_149_38"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_149_38" result="shape"/>
+</filter>
+</defs>
+</svg>
