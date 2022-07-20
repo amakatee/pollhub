@@ -23,14 +23,15 @@ const Registration = () => {
         e.preventDefault()
         if(!checked) return 
         if(!validPwd){
-            e.target[1].classList.add('pwd-err')
-            e.target[3].classList.add('err-button')
+            e.target.children[1].classList.add('pwd-err')
+            e.target.children[3].classList.add('err-button')
             setErrMsg(true)
+            
 
          
         }else{ 
-            e.target[1].classList.remove('pwd-err')
-            e.target[3].classList.remove('err-button')
+            e.target.children[1].classList.remove('pwd-err')
+            e.target.children[3].classList.remove('err-button')
             setErrMsg(false)
           
             // try {
@@ -42,8 +43,7 @@ const Registration = () => {
     
     
             //       })
-            //       console.log(response.data)
-            //       console.log(response.accessToken)
+          
     
             // } catch(err){
     
