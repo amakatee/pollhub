@@ -7,7 +7,7 @@ import {AuthContext} from '../context/AuthContext'
 import axios from './api/axios'
 
 
-const REGISTER_URL = ''
+const REGISTER_URL = '/auth/jwt/create/'
 const PHONE_REGEX = /^(\+7|7|8)?[\s\-]?\(?[489][0-9]{2}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$/
 const Registration = () => {
     const { userRef, user, setUser, validName,setValidName, userFocus, setUserFocus, pwd, setPwd, 
@@ -34,20 +34,22 @@ const Registration = () => {
             e.target.children[3].classList.remove('err-button')
             setErrMsg(false)
           
-            // try {
-            //     const response = await axios.post(REGISTER_URL,
-            //       JSON.stringify({user:username, pwd:password}),
-            //       {
-            //           headers: {'Content-Type': 'application/json'},
-            //           withCredentials: true
+            try {
+                const response = await axios.post(REGISTER_URL,
+                  JSON.stringify({username:user, password:pwd}),
+                  {
+                      headers: {'Content-Type': 'application/json'},
+                      withCredentials: true,
+                     
+                      
     
     
-            //       })
-          
+                  })
+            console.log(response.data)
     
-            // } catch(err){
+            } catch(err){
     
-            // }
+            }
             setSuccessEmail(true)
         }
 
