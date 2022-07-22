@@ -21,7 +21,7 @@ const Registration = () => {
  
 
     const [phone, setPhone] = useState('')
-    const [currentStatus,  setCurrentStatus] = useState('Role')
+    const [currentStatus,  setCurrentStatus] = useState('EmailPwd')
    
 
     const [userCurrentStatus, setUserCurrentStatus] = useState('user')
@@ -109,7 +109,7 @@ const Registration = () => {
     const chooseRole = <section  className='choose-role display-column'>
         <p className='main-p-text'>Выберите свою роль</p>
         <ul  className='roles display-column'>
-            <li  className='role-option  white-fill'>
+            <li  className='role-option  active-fill'>
                 <label>
                   <input  ref={userOptRef} onChange={(e) => handleStatusChange(e,options) } name="role-opt" type='radio' className='input-opt' value='user' />
                   <h4>Пользователь</h4>
