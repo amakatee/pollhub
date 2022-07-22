@@ -32,8 +32,6 @@ export const AuthContext = ({children}) => {
 
     useEffect(() => {
         const result = EMAIL_REGEX.test(user)
-        console.log(result)
-        console.log(user)
         setValidName(result)
 
     },[user])

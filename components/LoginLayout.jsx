@@ -4,6 +4,7 @@ import LoginNav from './LoginNav'
 import dynamic from "next/dynamic"
 import RegisterContext from '../context/AuthContext'
 import { useContext } from 'react'
+import Image from 'next/image'
 // const LoginNav = dynamic(() => import('./LoginNav'), {ssr:false})
 
 const LoginLayout = ({children}) => {
@@ -24,6 +25,7 @@ const LoginLayout = ({children}) => {
 
   return (
     <>
+   <img className='image-background' alt='' src='/assets/background.jpg'></img>
     
     {errMsg && err}
     <div className='login-main'>
