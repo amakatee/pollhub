@@ -116,7 +116,7 @@ const Registration = () => {
                   <p>Решай тесты и получи больше баллов!</p>
                 </label>
             </li>
-            <li  className='role-option white-fill'>
+            <li  className='role-option'>
                 <label>
                  <input ref={creatorOptRef} onChange={(e) => handleStatusChange(e, options)} type='radio' name="role-opt" className='input-opt' value='creator' />
                   <h4>Создатель</h4>
@@ -137,6 +137,7 @@ const Registration = () => {
   })
 
    function handleStatusChange(e, options){
+       console.log(e.target.checked)
        const role = e.target
        const parent = e.target.parentElement.parentElement
        setUserCurrentStatus(e.target.value)

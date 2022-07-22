@@ -25,10 +25,7 @@ export const AuthContext = ({children}) => {
 
     const [checked, isChecked] = useState(false)
   
-    useEffect(() => {
-        // userRef.current.focus()
-   
-    }, [])
+
 
     useEffect(() => {
         const result = EMAIL_REGEX.test(user)
