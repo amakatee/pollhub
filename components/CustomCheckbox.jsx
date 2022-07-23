@@ -2,6 +2,7 @@ import React from 'react'
 import { useContext } from 'react'
 import  RegisterContext from '../context/AuthContext'
 
+
 const CustomCheckbox = () => {
     const { 
         checked,
@@ -17,7 +18,7 @@ const CustomCheckbox = () => {
     onChange={(e) => isChecked(e.target.checked)}
 
     />
-    {checked ? <img className='checkbox-img' src="/assets/checkbox.svg" width="10px"></img> : <></>}
+    {checked ? <img className='checkbox-img' src="/assets/checkbox.svg" width="10px"  alt=''></img> : <></>}
     </>
   )
 }

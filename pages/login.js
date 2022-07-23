@@ -2,18 +2,16 @@ import React, { useContext, useRef } from 'react'
 import LoginLayout from '../components/LoginLayout'
 import LoginNav from '../components/LoginNav'
 import RegisterContext, { AuthContext } from '../context/AuthContext'
+import CustomInput from '../components/CustomInput'
 
 
-const LOGIN_URL = '/auth/jwt/create/'
+
 const Login = () => {
   const {userRef, checked, isChecked, setUser, setPwd} = useContext(RegisterContext)
 
   const userLoginRef = useRef()
 
-  async function handleSubmitLogin (e) {
-    console.log(e)
-
-  }
+ 
     return (
       <LoginLayout>
           <form className='reg-form' onSubmit={(e) => handleSubmitLogin(e)}>
@@ -21,7 +19,7 @@ const Login = () => {
                      className='register-input'
                     type="text"
                     id="username"
-                    ref={userRef}
+                    ref={userLoginRef}
                     required
                   
                     placeholder='E-mail'
