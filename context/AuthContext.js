@@ -71,21 +71,26 @@ export const AuthContext = ({children}) => {
     }, [pwd])
 
 
-
-
+    const requestHeaders = 
+    {
+        headers: {'Content-Type': 'application/json'},
+        withCredentials: true,
+    }
     
+
+
     async function submitRegistration(e){
         e.preventDefault()
         try {
             const response = await axios.post(REGISTER_URL,
-              JSON.stringify({username:user, password:pwd, first_name:name, last_name:familyName}),
-              {
-                  headers: {'Content-Type': 'application/json'},
-                  withCredentials: true,
-              })
+              JSON.stringify({username:user, password:pwd, first_name:name, last_name:familyName}),requestHeaders)
+
+              const res2  = await axios.post(JWT_TOKEN_URL,
+                JSON.stringify({username:user, password:pwd}),requestHeaders)
            
          
             const acc = response?.data.refreshToken    
+            console.log(res2.data)
 
           
 
@@ -98,6 +103,32 @@ export const AuthContext = ({children}) => {
       
         } 
     }
+
+    
+    // async function submitRegistration(e){
+    //     e.preventDefault()
+    //     try {
+    //         const response = await axios.post(REGISTER_URL,
+    //           JSON.stringify({username:user, password:pwd, first_name:name, last_name:familyName}),
+    //           {
+    //               headers: {'Content-Type': 'application/json'},
+    //               withCredentials: true,
+    //           })
+           
+         
+    //         const acc = response?.data.refreshToken    
+
+          
+
+            
+    //     console.log(response)
+    //     console.log(acc)
+        
+    //     } catch(err){
+    //      console.log(err.message)
+      
+    //     } 
+    // }
 
    
     function handleSubmit(e){
