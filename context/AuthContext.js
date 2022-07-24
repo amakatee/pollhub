@@ -1,6 +1,7 @@
 import { createContext, useRef, useState, useEffect } from "react";
 import axios from "../pages/api/axios";
 
+
 const RegisterContext = createContext()
 
 const REGISTER_URL = '/auth/users/'
@@ -70,6 +71,9 @@ export const AuthContext = ({children}) => {
     }, [pwd])
 
 
+
+
+    
     async function submitRegistration(e){
         e.preventDefault()
         try {
@@ -79,29 +83,23 @@ export const AuthContext = ({children}) => {
                   headers: {'Content-Type': 'application/json'},
                   withCredentials: true,
               })
+           
+         
+            const acc = response?.data.refreshToken    
+
+          
 
             
-        console.log(response.data)
+        console.log(response)
+        console.log(acc)
+        
         } catch(err){
          console.log(err.message)
       
-        }
-        try {
-           const response = await axios.post(JWT_TOKEN_URL,
-            JSON.stringify({username:user, password:pwd}),
-             {
-                 headers: {'Content-Type': 'application/json'},
-                 withCredentials: true,
-             })
-
-          
-              console.log(response.data)
-        }catch(err){
-             console.log(err.message)
-  
-}
-        
+        } 
     }
+
+   
     function handleSubmit(e){
         e.preventDefault()
         if(!checked) return 

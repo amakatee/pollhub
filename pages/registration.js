@@ -11,6 +11,7 @@ import CustomRegButton from '../components/customRegButton'
 
 
 
+
 const PHONE_REGEX = /^(\+7|7|8)?[\s\-]?\(?[489][0-9]{2}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$/
 const Registration = () => {
     const { userRef,
@@ -30,7 +31,8 @@ const Registration = () => {
             setName,
             setFamilyName,
             submitRegistration,
-            setPwd
+            setPwd,
+      
         } = useContext(RegisterContext)
     
 
@@ -92,8 +94,8 @@ const Registration = () => {
         <p className='main-p-text'>Выберите свою роль</p>
         <div  className='roles display-column'>
            { roles.map((role,i) => (
-             <label>
-               <div key={role.id} className={role.status === userCurrentStatus ? 'role-option  active-fill' : 'role-option'}>
+             <label key={role.id}>
+               <div  className={role.status === userCurrentStatus ? 'role-option  active-fill' : 'role-option'}>
                  <input  onChange={(e) => handleStatusChange(e) } name="role-opt" type='radio' className='input-opt' value={role.status} />
                  <h4>{role.userOption}</h4>
                  <p>{role.description}</p>
@@ -117,12 +119,12 @@ const Registration = () => {
         <CustomInput placeholderValue='Фамилия' setObj={setFamilyName} refValue={userRef} id="familyName" />
         <div className='role-buttons'>
           <button onClick={() => setCurrentStatus('Role')} className='button-back white-fill'><h4>Назад</h4></button>
-          <button type='submit' className='button-continue active-fill'><h4>Продолжить</h4></button>
+          <button  type='submit' className='button-continue active-fill'><h4>Продолжить</h4></button>
         </div>
 
       
     </form>
-    
+
   
    
 
