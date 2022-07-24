@@ -1,13 +1,11 @@
 import React from 'react'
-import { useRef, useState, useEffect } from 'react'
+
 import LoginLayout from '../components/LoginLayout'
 import { useContext } from 'react'
 import RegisterContext from '../context/AuthContext'
-import {AuthContext} from '../context/AuthContext'
-import axios from './api/axios'
 import CustomInput from '../components/CustomInput'
 import CustomCheckbox from '../components/CustomCheckbox'
-import CustomRegButton from '../components/customRegButton'
+
 
 
 

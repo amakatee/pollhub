@@ -85,18 +85,15 @@ export const AuthContext = ({children}) => {
             const response = await axios.post(REGISTER_URL,
               JSON.stringify({username:user, password:pwd, first_name:name, last_name:familyName}),requestHeaders)
 
-              const res2  = await axios.post(JWT_TOKEN_URL,
+              const tokens  = await axios.post(JWT_TOKEN_URL,
                 JSON.stringify({username:user, password:pwd}),requestHeaders)
            
          
-            const acc = response?.data.refreshToken    
-            console.log(res2.data)
+            const data = response?.data    
+            console.log(tokens?.data)
 
-          
-
-            
         console.log(response)
-        console.log(acc)
+       
         
         } catch(err){
          console.log(err.message)
